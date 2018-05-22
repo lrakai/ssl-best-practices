@@ -1,0 +1,25 @@
+###############################################################################
+[req]
+# Refer to man req for configuration options
+
+# Do not prompt for unspecified fields
+prompt             = no
+# Distinguished name fields
+distinguished_name = req_distinguished_name
+# extensions
+req_extensions     = v3_req
+
+###############################################################################
+[req_distinguished_name]
+commonName          = www.ca-lab-website.com
+emailAddress        = admin@ca-lab-website.com
+organizationName    = Cloud Academy Labs
+localityName        = San Francisco
+stateOrProvinceName = CA
+countryName         = US
+
+###############################################################################
+[v3_req]
+# refer to man x509v3_config for more about extensions and alternative names
+# Wildcards can be used to cover all subdomains, e.g. *.ca-lab-website.com
+subjectAltName = DNS:www.ca-lab-website.com,DNS:ca-lab-website.com
