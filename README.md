@@ -33,7 +33,7 @@ Deploy the CloudFormation `infrastructure/cloudformation.json` template. The tem
     openssl req -new -config csr.cnf -key key.pem -out req.csr
     ```
 
-1. Create a CA and root certificate
+1. Create a CA and root certificate (self-sign a CSR)
 
     ```sh
     openssl req -key ca.key.pem -new -out ca.csr
